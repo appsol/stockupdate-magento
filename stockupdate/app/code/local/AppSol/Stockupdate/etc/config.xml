@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : config.xml
+    Created on : 30 June 2010, 08:08
+    Author     : stuart
+    Description:
+        Purpose of the document follows.
+-->
+
+<config>
+    <modules>
+	<AppSol_Stockupdate>
+	    <version>0.1.1</version>
+	</AppSol_Stockupdate>
+    </modules>
+    <global>
+	<resources>
+	    <stockupdate_setup>
+		<setup>
+		    <module>AppSol_Stockupdate</module>
+		</setup>
+		<connection>
+		    <use>core_setup</use>
+		</connection>
+	    </stockupdate_setup>
+	    <stockupdate_write>
+		<connection>
+		    <use>core_write</use>
+		</connection>
+	    </stockupdate_write>
+	    <stockupdate_read>
+		<connection>
+		    <use>core_read</use>
+		</connection>
+	    </stockupdate_read>
+	</resources>
+	<models>
+	    <stockupdate>
+		<class>AppSol_Stockupdate_Model</class>
+		<resourceModel>stockupdate_mysql4</resourceModel>
+	    </stockupdate>
+	    <stockupdate_mysql4>
+		<class>AppSol_Stockupdate_Model_Mysql4</class>
+		<entities>
+		    <stockupdate>
+			<table>stockupdate</table>
+		    </stockupdate>
+		</entities>
+	    </stockupdate_mysql4>
+	</models>
+	<blocks>
+	    <stockupdate>
+		<class>AppSol_Stockupdate_Block</class>
+	    </stockupdate>
+	</blocks>
+	<helpers>
+	    <stockupdate>
+		<class>AppSol_Stockupdate_Helper</class>
+	    </stockupdate>
+	</helpers>
+    </global>
+    <admin>
+	<routers>
+	    <stockupdate>
+		<use>admin</use>
+		<args>
+		    <module>AppSol_Stockupdate</module>
+		    <frontName>stockupdate</frontName>
+		</args>
+	    </stockupdate>
+	</routers>
+    </admin>
+    <adminhtml>
+	<layouts>
+	    <updates>
+		<stockupdate>
+		    <file>stockupdate.xml</file>
+		</stockupdate>
+	    </updates>
+	</layouts>
+    </adminhtml>
+</config>

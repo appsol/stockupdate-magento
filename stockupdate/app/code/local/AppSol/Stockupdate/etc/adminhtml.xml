@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : adminhtml.xml
+    Created on : 04 July 2011, 16:21
+    Author     : stuart
+    Description:
+        Purpose of the document follows.
+-->
+
+<config>
+    <menu>
+	<catalog>
+	    <children>
+		<stockupdate translate="title" module="stockupdate">
+		    <title>Stock Update</title>
+		    <action>stockupdate/adminhtml_stockupdate/index</action>
+		    <sortorder>100</sortorder>
+		</stockupdate>
+	    </children>
+	</catalog>
+    </menu>
+    <acl>
+	<resources>
+	    <admin>
+		<children>
+		    <catalog>
+			<children>
+			    <stockupdate>
+				<title>Process Stock Data CSV</title>
+				<sort_order>1000</sort_order>
+			    </stockupdate>
+			</children>
+		    </catalog>
+		</children>
+	    </admin>
+	</resources>
+    </acl>
+</config>

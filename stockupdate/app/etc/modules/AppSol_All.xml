@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : AppSol_All.xml
+    Created on : 30 June 2010, 08:13
+    Author     : stuart
+    Description:
+        Purpose of the document follows.
+-->
+
+<config>
+    <modules>
+	<AppSol_RelatedProducts>
+	    <active>true</active>
+	    <codePool>local</codePool>
+	</AppSol_RelatedProducts>
+	<AppSol_FeaturedProducts>
+	    <active>true</active>
+	    <codePool>local</codePool>
+	</AppSol_FeaturedProducts>
+	<AppSol_PostcodeShipping>
+	    <active>true</active>
+	    <codePool>local</codePool>
+	</AppSol_PostcodeShipping>
+	<AppSol_Stockupdate>
+	    <active>true</active>
+	    <codePool>local</codePool>
+	</AppSol_Stockupdate>
+	<AppSol_Dropship>
+	    <active>false</active>
+	    <codePool>local</codePool>
+	</AppSol_Dropship>
+	<!--<AppSol_Adminhtml>
+	    <active>true</active>
+	    <codePool>local</codePool>
+	</AppSol_Adminhtml>-->
+        <AppSol_PromoBox>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Cms />
+            </depends>
+        </AppSol_PromoBox>
+        <AppSol_Agecheck>
+            <active>true</active>
+            <codePool>local</codePool>
+	    <depends>
+		<Mage_Payment />
+	    </depends>
+        </AppSol_Agecheck>
+    </modules>
+</config>
